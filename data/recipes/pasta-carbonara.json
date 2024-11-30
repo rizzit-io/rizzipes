@@ -1,0 +1,159 @@
+{
+  "name": "Pasta Carbonara",
+  "ingredients": [
+    {
+      "id": "spaghetti",
+      "name": "La Molisana Spaghetti",
+      "unit": "gram"
+    },
+    {
+      "id": "pecorino-romano",
+      "name": "Pecorino Romano",
+      "unit": "gram"
+    },
+    {
+      "id": "guanciale",
+      "name": "Guanciale",
+      "unit": "gram"
+    },
+    {
+      "id": "egg-medium",
+      "name": "Ei (M)",
+      "unit": "stuks"
+    },
+    {
+      "id": "egg-yolk-medium",
+      "name": "Eigeel (M)",
+      "unit": "stuks"
+    },
+    {
+      "id": "salt",
+      "name": "Zout",
+      "unit": "gram"
+    },
+    {
+      "id": "black-pepper",
+      "name": "Vers gemalen zwarte peper",
+      "unit": "gram"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "unit": "liter"
+    }
+  ],
+  "supplies": [
+    {
+      "id": "plate",
+      "name": "bord"
+    },
+    {
+      "id": "pan",
+      "name": "pan"
+    },
+    {
+      "id": "skillet",
+      "name": "hapjespan"
+    },
+    {
+      "id": "cheese-grader",
+      "name": "kaasrasp"
+    },
+    {
+      "id": "spatula",
+      "name": "spatel"
+    },
+    {
+      "id": "bowl",
+      "name": "schaal"
+    },
+    {
+      "id": "cup",
+      "name": "kopje"
+    },
+    {
+      "id": "colander",
+      "name": "vergiet"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Verwarm het Bord",
+      "text": "Verwarm het {{supplies:plate}}"
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "guanciale",
+          "amount": 100
+        }
+      ],
+      "name": "Karameliseer de Guanciale",
+      "text": "Bak {{useIngredients:guanciale}} in eigen vet in de {{supplies:skillet}} op laag to medium vuur tot diep gekarameliseerd. Dit duurt ongeveer 15 minuten."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 60
+        }
+      ],
+      "name": "Rasp de kaas",
+      "text": "Rasp {{useIngredients:pecorino-romano}} met de {{supplies:cheese-grader}}."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "egg-medium",
+          "amount": 1
+        },
+        {
+          "belongsToId": "egg-yolk-medium",
+          "amount": 1
+        },
+        {
+          "belongsToId": "black-pepper",
+          "amount": 6.5
+        }
+      ],
+      "name": "Maak de saus",
+      "text": "Klop {{useIngredients:egg-medium}} en {{useIngredients:egg-yolk-medium}}. Voeg de geraspte {{ingredients:pecorino-romano}} en {{useIngredients:black-pepper}} al kloppend toe aan het mengsel."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "water",
+          "amount": 1.25
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 10
+        },
+        {
+          "belongsToId": "spaghetti",
+          "amount": 100
+        }
+      ],
+      "name": "Kook de pasta",
+      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:spaghetti}} moet 9 minuten koken tot al dente."
+    },
+    {
+      "name": "Assembleer",
+      "text": "Schep voor de pasta afgegoten wordt met het {{supplies:cup}} wat kookvocht uit de {{supplies:pan}}. Giet de pasta af. Haal de {{supplies:pan}} van het vuur. Roer de afgegoten {{ingredients:spaghetti}} het door de {{ingredients:guanciale}}. Voeg de saus toe en blijf roeren. Als de saus te dik is voeg wat kookvocht toe en blijf roeren. Als alles goed gemixt schep het resultaat op het {{supplies:plate}}."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 5
+        },
+        {
+          "belongsToId": "black-pepper",
+          "amount": 1
+        }
+      ],
+      "name": "Garneer",
+      "text": "Garneer met {{useIngredients:pecorino-romano}} en daarna met {{useIngredients:black-pepper}}."
+    }
+  ]
+}
