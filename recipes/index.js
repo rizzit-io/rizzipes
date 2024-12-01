@@ -590,10 +590,7 @@ fetchRecipe(id)
             }
         }
     })
-    .catch(e => {
-        console.error(e)
-        setRecipe(notFound)
-    })
+    .catch(() => setRecipe(notFound))
 
 /**
  * @param {Recipe} recipe
@@ -657,8 +654,6 @@ function createStepSection(step, index) {
     const paragraph = document.createElement('p')
 
     header.innerText = `${index}: ${step.name}`
-
-    console.log(step.text)
 
     for (const textItem of step.text) {
         if (typeof textItem === 'string') {
