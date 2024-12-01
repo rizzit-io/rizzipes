@@ -1,0 +1,134 @@
+{
+  "name": "Spaghetti Aglio, Olio e Peperonico",
+  "ingredients": [
+    {
+      "id": "garlic",
+      "name": "Knoflook",
+      "unit": ""
+    },
+    {
+      "id": "red-pepper",
+      "name": "Rode peper",
+      "unit": "stuks"
+    },
+    {
+      "id": "extra-virgin-olive-oil",
+      "name": "Extra virgine olijfolie",
+      "unit": "el"
+    },
+    {
+      "id": "flat-leaf-parsley",
+      "name": "Platte peterselie",
+      "unit": "gram"
+    },
+    {
+      "id": "salt",
+      "name": "Zout",
+      "unit": "gram"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "unit": "liter"
+    },
+    {
+      "id": "spaghetti",
+      "name": "La Molisana Spaghetti",
+      "unit": "gram"
+    }
+  ],
+  "supplies": [
+    {
+      "id": "cutting-board",
+      "name": "snijplank"
+    },
+    {
+      "id": "kitchen-knife",
+      "name": "keukenmes"
+    },
+    {
+      "id": "skillet",
+      "name": "hapjespan"
+    },
+    {
+      "id": "pan",
+      "name": "pan"
+    },
+    {
+      "id": "plate",
+      "name": "bord"
+    },
+    {
+      "id": "cup",
+      "name": "kopje"
+    },
+    {
+      "id": "colander",
+      "name": "vergiet"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Verwarm het Bord",
+      "text": "Verwarm het {{supplies:plate}}"
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "garlic",
+          "amount": 0.5
+        },
+        {
+          "belongsToId": "red-pepper",
+          "amount": 1
+        },
+        {
+          "belongsToId": "flat-leaf-parsley",
+          "amount": 15
+        }
+      ],
+      "name": "Snijden",
+      "text": "Snipper {{useIngredients:garlic}}, {{useIngredients:red-pepper}} en de steeltjes van {{useIngredients:flat-leaf-parsley}}. snij de blaadjes van de {{ingredients:flat-leaf-parsley}} iets minder fijn."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "extra-virgin-olive-oil",
+          "amount": 7
+        }
+      ],
+      "name": "Fruiten",
+      "text": "Verwarm een {{supplies:skillet}}. Voeg als de {{supplies:skillet}} op temperatuur is {{useIngredients:extra-virgin-olive-oil}} toe. Fruit de {{ingredients:garlic}}, {{ingredients:red-pepper}} en de steeltjes van de {{ingredients:flat-leaf-parsley}} op middelhoog vuur."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "water",
+          "amount": 1.25
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 10
+        },
+        {
+          "belongsToId": "spaghetti",
+          "amount": 100
+        }
+      ],
+      "name": "Kook de pasta",
+      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:spaghetti}} moet 9 minuten koken tot al dente."
+    },
+    {
+      "name": "Maak de saus",
+      "text": "Schep 3 minuten voordat de {{ingredients:spaghetti}} klaar is met koken wat {{ingredients:water}} uit de {{supplies:pan}}. Voeg dit kookvocht toe aan de {{supplies:skillet}}} en klop het gedurende de resterende tijd door elkaar."
+    },
+    {
+      "name": "Samenstellen",
+      "text": "giet de {{ingredients:spaghetti}} af en voeg het samen met het merendeel van de blaadjes van de {{ingredients:flat-leaf-parsley}} toe aan de saus. Roer dit nog een paar minuten door elkaar."
+    },
+    {
+      "name": "Serveren",
+      "text": "Schep de pasta op het {{supplies:plate}} en garneer met de overgebleven blaadjes van de {{ingredients:flat-leaf-parsley}}."
+    }
+  ]
+}
