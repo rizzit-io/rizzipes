@@ -1,0 +1,179 @@
+{
+  "name": "Pasta All'Arrabbiata",
+  "ingredients": [
+    {
+      "id": "garlic",
+      "name": "Knoflook",
+      "unit": ""
+    },
+    {
+      "id": "red-pepper",
+      "name": "Rode peper",
+      "unit": "stuks"
+    },
+    {
+      "id": "extra-virgin-olive-oil",
+      "name": "Extra virgine olijfolie",
+      "unit": "el"
+    },
+    {
+      "id": "flat-leaf-parsley",
+      "name": "Platte peterselie",
+      "unit": "gram"
+    },
+    {
+      "id": "salt",
+      "name": "Zout",
+      "unit": "gram"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "unit": "liter"
+    },
+    {
+      "id": "penne-rigate",
+      "name": "La Molisana Penne rigate",
+      "unit": "gram"
+    },
+    {
+      "id": "dried-basilicum",
+      "name": "Gedroogde basilicum",
+      "unit": "gram"
+    },
+    {
+      "id": "pecorino-romano",
+      "name": "Pecorino Romano",
+      "unit": "gram"
+    },
+    {
+      "id": "mutti-pomodoro-san-marzano",
+      "name": "Mutti Pomodoro San Marzano",
+      "unit": "ml"
+    }
+  ],
+  "supplies": [
+    {
+      "id": "cutting-board",
+      "name": "snijplank"
+    },
+    {
+      "id": "kitchen-knife",
+      "name": "keukenmes"
+    },
+    {
+      "id": "skillet",
+      "name": "hapjespan"
+    },
+    {
+      "id": "pan",
+      "name": "pan"
+    },
+    {
+      "id": "plate",
+      "name": "bord"
+    },
+    {
+      "id": "colander",
+      "name": "vergiet"
+    },
+    {
+      "id": "cheese-grader",
+      "name": "kaasrasp"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Verwarm het Bord",
+      "text": "Verwarm het {{supplies:plate}}."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "garlic",
+          "amount": 0.5
+        },
+        {
+          "belongsToId": "red-pepper",
+          "amount": 1
+        },
+        {
+          "belongsToId": "flat-leaf-parsley",
+          "amount": 15
+        }
+      ],
+      "name": "Snijden",
+      "text": "Snipper {{useIngredients:garlic}}, {{useIngredients:red-pepper}} en de steeltjes van {{useIngredients:flat-leaf-parsley}}. snij de blaadjes van de {{ingredients:flat-leaf-parsley}} iets minder fijn en leg er een paar opzij."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "extra-virgin-olive-oil",
+          "amount": 2
+        }
+      ],
+      "name": "Fruiten",
+      "text": "Verwarm een {{supplies:skillet}}. Voeg als de {{supplies:skillet}} op temperatuur is {{useIngredients:extra-virgin-olive-oil}} toe. Fruit de {{ingredients:garlic}}, {{ingredients:red-pepper}} en de {{ingredients:flat-leaf-parsley}} op middelhoog vuur."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "mutti-pomodoro-san-marzano",
+          "amount": 212.5
+        },
+        {
+          "belongsToId": "dried-basilicum",
+          "amount": 3
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 2
+        }
+      ],
+      "name": "Maak de saus",
+      "text": "Voeg {{useIngredients:mutti-pomodoro-san-marzano}}, {{useIngredients:salt}} en {{useIngredients:dried-basilicum}} toe aan de {{supplies:skillet}} en prak de tomaten tot het een passata wordt. Laat dit vervolgens inkoken op middelmatig vuur."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "water",
+          "amount": 1.25
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 10
+        },
+        {
+          "belongsToId": "penne-rigate",
+          "amount": 100
+        }
+      ],
+      "name": "Kook de pasta",
+      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:penne-rigate}} moet 9 minuten koken tot al dente."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 10
+        }
+      ],
+      "name": "Voeg de kaas toe aan de saus",
+      "text": "Rasp, 2 minuten voordat de pasta klaar is, met de {{supplies:cheese-grader}} {{useIngredients:pecorino-romano}} en voeg dit toe aan de {{supplies:skillet}} en roer totdat het gemengt is."
+    },
+    {
+      "name": "Voeg de pasta toe aan de saus",
+      "text": "Giet de {{ingredients:penne-rigate}} af en voeg het toe aan de saus roer totdat goed gemengt."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 2
+        }
+      ],
+      "name": "Serveer",
+      "text": "Schep de inhoud van de {{supplies:skillet}} op het bord en garneer met geraspte {{useIngredients:pecorino-romano}} en een paar {{ingredients:flat-leaf-parsley}} blaadjes."
+    }
+  ]
+}

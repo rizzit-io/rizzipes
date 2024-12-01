@@ -79,7 +79,7 @@
   "steps": [
     {
       "name": "Verwarm het Bord",
-      "text": "Verwarm het {{supplies:plate}}"
+      "text": "Verwarm het {{supplies:plate}}."
     },
     {
       "useIngredients": [
