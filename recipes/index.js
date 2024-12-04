@@ -549,7 +549,22 @@ class StepFactory {
  * }} UseData
  */
 
-const defaultPortions = 1
+/**
+ * @param {number} portions
+ * @param {number} min
+ * @param {number} max
+ * @return boolean
+ */
+function isValidPortionSize(portions, min, max) {
+    return !isNaN(portions)
+        && isFinite(portions)
+        && portions >= min
+        && portions <= max
+}
+
+const minPortions = 1
+
+const maxPortions = 1000
 
 /**
  * @type {Recipe}
@@ -575,11 +590,13 @@ const stepsElement = document.getElementById('steps')
 
 const ingredientsElement = document.getElementById('ingredients')
 
-const initialPortions = queryParamsPortions && !isNaN(queryParamsPortions) ?
+const initialPortions = isValidPortionSize(queryParamsPortions, minPortions, maxPortions) ?
     queryParamsPortions :
-    defaultPortions
+    minPortions
 
 portionsElement.value = initialPortions.toString()
+portionsElement.min = minPortions.toString()
+portionsElement.max = maxPortions.toString()
 
 const recipeFactory = new RecipeFactory(new StepFactory())
 
@@ -590,13 +607,13 @@ fetchRecipe(queryParamsId)
         portionsElement.onchange = (event) => {
             const portions = parseInt(event.target.value)
 
-            if (isNaN(portions)) {
+            if (!isValidPortionSize(portions, minPortions, maxPortions)) {
                 return
             }
 
             searchParams.set('portions', portions.toString())
             
-            if (portions === defaultPortions) {
+            if (portions === minPortions) {
                 searchParams.delete('portions')
             }
 
