@@ -558,7 +558,9 @@ const notFound = new Recipe('Recept niet gevonden', [], [], [])
 
 const searchParams = new URLSearchParams(window.location.search)
 
-const id = searchParams.get('id')
+const queryParamsId = searchParams.get('id')
+
+const queryParamsPortions = parseInt(searchParams.get('portions'))
 
 /**
  * @type {HTMLInputElement}
@@ -573,21 +575,39 @@ const stepsElement = document.getElementById('steps')
 
 const ingredientsElement = document.getElementById('ingredients')
 
-portionsElement.value = defaultPortions.toString()
+const initialPortions = queryParamsPortions && !isNaN(queryParamsPortions) ?
+    queryParamsPortions :
+    defaultPortions
+
+portionsElement.value = initialPortions.toString()
 
 const recipeFactory = new RecipeFactory(new StepFactory())
 
-fetchRecipe(id)
+fetchRecipe(queryParamsId)
     .then(recipeData => {
-        const recipe = recipeFactory.create(recipeData, defaultPortions)
+        const recipe = recipeFactory.create(recipeData, initialPortions)
         setRecipe(recipe)
         portionsElement.onchange = (event) => {
             const portions = parseInt(event.target.value)
 
-            if (!isNaN(portions)) {
-                recipe.portions = portions
-                setRecipe(recipe)
+            if (isNaN(portions)) {
+                return
             }
+
+            searchParams.set('portions', portions.toString())
+            
+            if (portions === defaultPortions) {
+                searchParams.delete('portions')
+            }
+
+            history.replaceState(
+                null,
+                null,
+                `${window.location.origin}${window.location.pathname}?${searchParams.toString()}`)
+
+            recipe.portions = portions
+
+            setRecipe(recipe)
         }
     })
     .catch(() => setRecipe(notFound))
