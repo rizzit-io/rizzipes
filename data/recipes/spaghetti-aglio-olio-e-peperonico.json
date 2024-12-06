@@ -4,7 +4,7 @@
     {
       "id": "garlic",
       "name": "Knoflook",
-      "unit": ""
+      "unit": "gram"
     },
     {
       "id": "red-pepper",
@@ -76,7 +76,7 @@
       "useIngredients": [
         {
           "belongsToId": "garlic",
-          "amount": 0.5
+          "amount": 15
         },
         {
           "belongsToId": "red-pepper",
@@ -84,7 +84,7 @@
         },
         {
           "belongsToId": "flat-leaf-parsley",
-          "amount": 15
+          "amount": 7.5
         }
       ],
       "name": "Snijden",
@@ -98,7 +98,7 @@
         }
       ],
       "name": "Fruiten",
-      "text": "Verwarm een {{supplies:skillet}}. Voeg als de {{supplies:skillet}} op temperatuur is {{useIngredients:extra-virgin-olive-oil}} toe. Fruit de {{ingredients:garlic}}, {{ingredients:red-pepper}} en de steeltjes van de {{ingredients:flat-leaf-parsley}} op middelhoog vuur."
+      "text": "Verwarm een {{supplies:skillet}}. Voeg als de {{supplies:skillet}} op temperatuur is {{useIngredients:extra-virgin-olive-oil}} toe. Fruit de {{ingredients:garlic}}, {{ingredients:red-pepper}} en de steeltjes van de {{ingredients:flat-leaf-parsley}} op middelhoog vuur. Zorg dat de {{ingredients:garlic}} niet aanbrand."
     },
     {
       "useIngredients": [
