@@ -38,7 +38,7 @@
     },
     {
       "id": "pinot-grigio",
-      "name": "Pinot Gricio",
+      "name": "Pinot Grigio",
       "unit": "ml"
     }
   ],
@@ -76,11 +76,11 @@
           "amount": 50
         }
       ],
-      "name": "Karameliseer de Guanciale",
+      "name": "Karameliseer de guanciale",
       "text": "Bak {{useIngredients:guanciale}} in eigen vet in de {{supplies:skillet}} op laag to medium vuur tot diep gekarameliseerd. Dit duurt ongeveer 15 minuten."
     },
     {
-      "name": "Haal een beetje Guanciale uit de pan",
+      "name": "Guanciale voor garnering",
       "text": "Schep een beetje {{ingredients:guanciale}} uit de pan en zet het opzij voor garnering."
     },
     {
@@ -91,7 +91,7 @@
         }
       ],
       "name": "Deglazen",
-      "text": "Deglaze de {{supplies:skillet}} met de {{useIngredients:pinot-grigio}}."
+      "text": "Deglaze de {{supplies:skillet}} met de {{useIngredients:pinot-grigio}} en laat de alcohol verdampen."
     },
     {
       "useIngredients": [
@@ -105,11 +105,11 @@
         },
         {
           "belongsToId": "black-pepper",
-          "amount": 1
+          "amount": 2
         }
       ],
       "name": "Maak de saus",
-      "text": "Voeg {{useIngredients:mutti-pomodoro-san-marzano}}, {{useIngredients:salt}} en {{useIngredients:black-pepper} toe aan de {{supplies:skillet}} en prak de tomaten tot het een passata wordt. Laat dit vervolgens inkoken op laag tot middelmatig vuur."
+      "text": "Voeg {{useIngredients:mutti-pomodoro-san-marzano}}, {{useIngredients:salt}} en {{useIngredients:black-pepper}} toe aan de {{supplies:skillet}} en prak de tomaten tot het een passata wordt. Laat dit vervolgens inkoken op laag tot middelmatig vuur."
     },
     {
       "useIngredients": [
@@ -127,7 +127,7 @@
         }
       ],
       "name": "Kook de pasta",
-      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:penne-rigate}} moet 9 minuten koken tot al dente."
+      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:penne-rigate}} moet 7 minuten koken tot al dente."
     },
     {
       "useIngredients": [
@@ -141,13 +141,17 @@
     },
     {
       "name": "Voeg de pasta toe aan de saus",
-      "text": "Giet de {{ingredients:penne-rigate}} af en voeg het toe aan de saus roer totdat goed gemengt is."
+      "text": "Giet de {{ingredients:penne-rigate}} af en voeg het toe aan de saus roer totdat goed gemengt is. Voeg eventueel als de saus te veel is ingekookt een beetje pastawater toe."
     },
     {
       "useIngredients": [
         {
           "belongsToId": "pecorino-romano",
           "amount": 2
+        },
+        {
+          "belongsToId": "black-pepper",
+          "amount": 0.5
         }
       ],
       "name": "Serveer",
