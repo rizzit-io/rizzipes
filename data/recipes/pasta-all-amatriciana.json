@@ -1,0 +1,161 @@
+{
+  "name": "Pasta All'Amatriciana",
+  "ingredients": [
+    {
+      "id": "salt",
+      "name": "Zout",
+      "unit": "gram"
+    },
+    {
+      "id": "black-pepper",
+      "name": "Vers gemalen zwarte peper",
+      "unit": "gram"
+    },
+    {
+      "id": "guanciale",
+      "name": "Guanciale",
+      "unit": "gram"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "unit": "liter"
+    },
+    {
+      "id": "penne-rigate",
+      "name": "La Molisana Penne rigate",
+      "unit": "gram"
+    },
+    {
+      "id": "pecorino-romano",
+      "name": "Pecorino Romano",
+      "unit": "gram"
+    },
+    {
+      "id": "mutti-pomodoro-san-marzano",
+      "name": "Mutti Pomodoro San Marzano",
+      "unit": "ml"
+    },
+    {
+      "id": "pinot-grigio",
+      "name": "Pinot Grigio",
+      "unit": "ml"
+    }
+  ],
+  "supplies": [
+    {
+      "id": "skillet",
+      "name": "hapjespan"
+    },
+    {
+      "id": "pan",
+      "name": "pan"
+    },
+    {
+      "id": "plate",
+      "name": "bord"
+    },
+    {
+      "id": "colander",
+      "name": "vergiet"
+    },
+    {
+      "id": "cheese-grader",
+      "name": "kaasrasp"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Verwarm het Bord",
+      "text": "Verwarm het {{supplies:plate}}."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "guanciale",
+          "amount": 50
+        }
+      ],
+      "name": "Karameliseer de guanciale",
+      "text": "Bak {{useIngredients:guanciale}} in eigen vet in de {{supplies:skillet}} op laag to medium vuur tot diep gekarameliseerd. Dit duurt ongeveer 15 minuten."
+    },
+    {
+      "name": "Guanciale voor garnering",
+      "text": "Schep een beetje {{ingredients:guanciale}} uit de pan en zet het opzij voor garnering."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pinot-grigio",
+          "amount": 10
+        }
+      ],
+      "name": "Deglazen",
+      "text": "Deglaze de {{supplies:skillet}} met de {{useIngredients:pinot-grigio}} en laat de alcohol verdampen."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "mutti-pomodoro-san-marzano",
+          "amount": 212.5
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 1
+        },
+        {
+          "belongsToId": "black-pepper",
+          "amount": 2
+        }
+      ],
+      "name": "Maak de saus",
+      "text": "Voeg {{useIngredients:mutti-pomodoro-san-marzano}}, {{useIngredients:salt}} en {{useIngredients:black-pepper}} toe aan de {{supplies:skillet}} en prak de tomaten tot het een passata wordt. Laat dit vervolgens inkoken op laag tot middelmatig vuur."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "water",
+          "amount": 1.25
+        },
+        {
+          "belongsToId": "salt",
+          "amount": 10
+        },
+        {
+          "belongsToId": "penne-rigate",
+          "amount": 100
+        }
+      ],
+      "name": "Kook de pasta",
+      "text": "Breng de {{supplies:pan}} met {{useIngredients:water}} aan de kook en voeg {{useIngredients:salt}} toe. Voeg zodra het water kookt de pasta toe. {{useIngredients:penne-rigate}} moet 7 minuten koken tot al dente."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 7.5
+        }
+      ],
+      "name": "Voeg de kaas toe aan de saus",
+      "text": "Rasp, 2 minuten voordat de pasta klaar is, met de {{supplies:cheese-grader}} {{useIngredients:pecorino-romano}}, voeg dit toe aan de {{supplies:skillet}} en roer totdat het gemengt is."
+    },
+    {
+      "name": "Voeg de pasta toe aan de saus",
+      "text": "Giet de {{ingredients:penne-rigate}} af en voeg het toe aan de saus roer totdat goed gemengt is. Voeg eventueel als de saus te veel is ingekookt een beetje pastawater toe."
+    },
+    {
+      "useIngredients": [
+        {
+          "belongsToId": "pecorino-romano",
+          "amount": 2
+        },
+        {
+          "belongsToId": "black-pepper",
+          "amount": 0.5
+        }
+      ],
+      "name": "Serveer",
+      "text": "Schep de inhoud van de {{supplies:skillet}} op het bord en garneer met de overgebleven {{ingredients:guanciale}}, {{useIngredients:pecorino-romano}} en een beetje {{ingredients:black-pepper}}."
+    }
+  ]
+}
